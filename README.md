@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-# preservationQuest
-Preservation Quest Volunteer Project
-=======
 # Brutal - The neobrutalist Astro theme
 
 Brutal is a minimal neobrutalist theme for [Astro](https://astro.build/). It's based on Neobrutalist Web Design, a movement that aims to create websites with a minimalistic and functional design. It has some integrations like Image Optimization, RSS, Sitemap, ready to get your SEO done right.
@@ -119,4 +115,3 @@ The theme has a few colors that you can use in the included components.
 More colors can be added in `astro.config.mjs` in the `colors` array.
 
 If you need more from this theme, don't hesitate to open an issue or reach out to me!
->>>>>>> initial template

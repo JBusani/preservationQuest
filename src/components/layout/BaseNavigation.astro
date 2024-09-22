@@ -5,19 +5,15 @@ interface Props {
 
 const navigationItems = [
   { name: 'Home', url: '/' },
-  { name: 'Blog', url: '/blog/' },
+  { name: 'Quick Access', url: '#' },
+  { name: 'View', url: '#' },
 ];
 
 const socialIcons = [
   {
     name: 'GitHub',
-    url: 'https://github.com/eliancodes/brutal',
+    url: 'https://github.com/JBusani/preservationQuest',
     icon: 'i-uil-github',
-  },
-  {
-    name: 'Twitter',
-    url: 'https://www.twitter.com/eliancodes',
-    icon: 'i-uil-twitter',
   },
   { name: 'RSS', url: '/feed.xml', icon: 'i-uil-rss' },
 ];
@@ -25,19 +21,21 @@ const socialIcons = [
 const { pageTitle } = Astro.props;
 ---
 
-<header class='border-b-4 border-black flex justify-between p-6 items-center'>
+<header class='border-b-4 border-black flex justify-between p-6 items-center header-style'>
   {pageTitle && <h1 class='hidden'>{pageTitle}</h1>}
-  <a href='/' title='Back to Home'>
-    <p class='righteous md:text-5xl'>Brutal</p>
-  </a>
-  <nav class='hidden md:inline-block'>
+  <nav class='hidden md:flex w-full justify-between items-center  '>
     <h2 class='hidden'>Navigation</h2>
-    <ul class='flex gap-8 poppins'>
+    <ul class='flex gap-8 monospace'>
+      <a href='/' class="content-center" title='Back to Home'>
+        <svg width="1rem" height="1rem" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M57.7944 0C56.0287 0 54.4569 1.17122 53.9694 2.84905C45.1815 33.1672 35.6207 41.0156 7.4814 41.0156C6.35641 41.0156 5.2086 41.0009 4.02655 40.9748L3.99068 40.9732H3.94176H3.94013C2.55428 40.9732 1.25158 41.7388 0.540717 42.9703C-0.158731 44.1774 -0.181557 45.6418 0.483653 46.7902C1.12767 47.9044 2.29994 48.5707 3.61731 48.5707C4.28415 48.5642 4.90208 48.5609 5.50533 48.5609C19.9035 48.5609 27.7915 50.5759 31.08 55.0914C34.6131 59.9408 33.8827 69.2373 28.711 85.2369C28.3426 86.3756 28.5235 87.568 29.2083 88.5062C29.8898 89.4413 31.0083 90 32.205 90C33.9691 90 35.5409 88.8271 36.0251 87.1509C44.8179 56.8328 54.377 48.9844 82.518 48.9844C83.6463 48.9844 84.7924 48.9975 85.9696 49.0252H86.0055H86.056C88.1935 49.0252 90 47.2007 90 45.0375C90 44.1253 89.669 43.2586 89.0674 42.5957C88.3908 41.8529 87.4125 41.4277 86.3805 41.4277C85.712 41.4358 85.0973 41.4375 84.4908 41.4375C70.0943 41.4375 62.2079 39.4241 58.9145 34.907C55.383 30.0559 56.1134 20.7595 61.2884 4.76308C61.6536 3.62443 61.4742 2.43204 60.7911 1.49213C60.1096 0.558733 58.9879 0 57.7944 0Z" fill="black"/>
+        </svg>
+      </a>
       {
         navigationItems.map((item) => (
           <li>
             <a
-              class='text-lg font-medium hover:text-green hover:underline transition-all duration-150 ease-in-out'
+              class='monospace text-lg  font-medium hover:text-green hover:underline transition-all duration-150 ease-in-out'
               href={item.url}
               title={`Go to ${item.name}`}
             >
@@ -46,26 +44,51 @@ const { pageTitle } = Astro.props;
           </li>
         ))
       }
-      {
-        socialIcons.map((item) => (
-          <li>
-            <a
-              href={item.url}
-              class='hover:text-green hover:underline transition-all duration-150 ease-in-out'
-              target='_blank'
-              title={`'See @ElianCodes on ${item.name}`}
-            >
-              <div class:list={[item.icon, 'w-6 h-6']} />
-            </a>
-          </li>
-        ))
-      }
     </ul>
+    <div class="inline">
+      <p id="currentDateTime" class="text-black"></p>
+    </div>
   </nav>
   <nav class='md:hidden flex'>
-    <h2 class='hidden'>Mobile Navigation</h2>
-    <ul>
-      <li><a href='/blog/'>Blog</a></li>
-    </ul>
+    <h2 class='hidden'>Mobile Navigation</h2> 
   </nav>
 </header>
+
+<!-- Add the styles for the header -->
+<style>
+  .header-style {
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    background: rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(10.95px);
+  }
+</style>
+
+<script>
+  function updateTime() {
+    const currentDateTimeElement = document.getElementById('currentDateTime');
+
+    // Check if the element exists before trying to update it
+    if (!currentDateTimeElement) {
+      console.warn('currentDateTime element not found');
+      return; // Exit the function if the element doesn't exist
+    }
+
+    const now = new Date();
+    const options = { 
+      weekday: 'short', 
+      year: 'numeric', 
+      month: 'short', 
+      day: 'numeric', 
+      hour: 'numeric', 
+      minute: 'numeric', 
+    };
+
+    currentDateTimeElement.textContent = now.toLocaleString('en-US', options);
+  }
+
+  // Update the time every second
+  setInterval(updateTime, 1000);
+
+  // Set the initial time when the page loads
+  updateTime();
+</script>

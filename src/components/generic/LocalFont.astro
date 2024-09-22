@@ -9,68 +9,59 @@ const getFontPath = (name: string) => join(appDir, "public", "fonts", name);
 <AstroFont
   config={[
     {
-      name: "Outfit",
+      name: "Degular Display",
       display: "swap",
-      selector: ".outfit",
+      selector: ".degularDisplayRegular",
       fallback: "sans-serif",
       src: [
-        {
+      {
           style: "normal",
-          path: getFontPath("outfit.ttf"),
-        },
+          path: getFontPath("DegularDisplay-Regular.ttf"),
+        }  
       ],
+      cssVariable: "degular-regular-font"
     },
     {
+      name: "Degular Display Bold",
       display: "swap",
-      name: "Poppins",
-      selector: ".poppins",
+      selector: ".degularDisplayBold",
       fallback: "sans-serif",
       src: [
-        {
-          preload: false,
+      {
           style: "normal",
-          path: getFontPath("poppins.ttf"),
-        },
+          path: getFontPath("DegularDisplay-Bold.ttf"),
+        }  
       ],
+      cssVariable: "degular-bold-font"
     },
     {
+      name: "Inter",
       display: "swap",
-      name: "Righteous",
+      selector: ".inter",
       fallback: "sans-serif",
-      selector: ".righteous",
       src: [
-        {
-          preload: false,
+      {
+          weight: "800",
           style: "normal",
-          path: getFontPath("righteous.ttf"),
-        },
+          path: getFontPath("Inter_24pt-ExtraBold.ttf"),
+        }  
       ],
+      cssVariable: "inter-font"
     },
     {
+      name: "Mono Space",
       display: "swap",
-      name: "Sanchez",
-      fallback: "serif",
-      selector: ".sanchez",
+      selector: ".monospace",
+      fallback: "sans-serif",
       src: [
-        {
-          preload: false,
+      {
+          weight: '400',
           style: "normal",
-          path: getFontPath("sanchez.ttf"),
-        },
+          path: getFontPath("SpaceMono-Regular.ttf"),
+        }  
       ],
+      cssVariable: "monospace-font"
     },
-    {
-      display: "swap",
-      fallback: "serif",
-      selector: ".dm-serif",
-      name: "DM Serif Text",
-      src: [
-        {
-          preload: false,
-          style: "normal",
-          path: getFontPath("dm-serif.ttf"),
-        },
-      ],
-    },
+    
   ]}
 />
