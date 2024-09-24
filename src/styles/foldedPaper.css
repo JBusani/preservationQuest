@@ -1,0 +1,27 @@
+.folded-paper {
+    position: relative;
+    width: 62px;
+    height: 74px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Creates depth */
+    border-radius: 5px; /* Slightly rounded edges */
+    overflow: hidden; /* Ensures the pseudo-elements don’t overflow */
+  }
+  
+  .folded-paper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image fills the div properly */
+  }
+  
+  .folded-paper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-width: 0 20px 20px 0; /* Creates a triangle shape */
+    border-style: solid;
+    border-color: transparent white transparent transparent; /* Color of the fold */
+    box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.2); /* Adds shadow for depth */
+    background: linear-gradient(135deg, rgba(255,255,255,0.8), rgba(255,255,255,0)); /* Gradient to simulate paper lighting */
+  }
+  
