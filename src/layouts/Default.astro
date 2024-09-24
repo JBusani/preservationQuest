@@ -2,6 +2,7 @@
 import BaseNavigation from '@components/layout/BaseNavigation.astro';
 import BaseFooter from '@components/layout/BaseFooter.astro';
 import BaseHead from '../components/layout/BaseHead.astro';
+import WallpaperFolder from '@components/generic/WallpaperFolder';
 import '../styles/global.css';
 
 interface Props {
@@ -12,16 +13,19 @@ interface Props {
   ogImage?: URL;
 }
 
+
+
 const { title, description, classList, pageTitle, ogImage } = Astro.props;
 ---
 
 <html lang='en' class='h-full'>
   <BaseHead ogImage={ogImage} title={title} description={description} />
-
   <body class:list={[classList]}>
     <BaseNavigation {pageTitle} />
-
-    <div class="container">
+    <aside >
+      <WallpaperFolder client:load />
+    </aside>
+      
       <div class="circle">
         <div class='logo'>
           <svg width="134" height="150" viewBox="0 0 334 250" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -58,9 +62,8 @@ const { title, description, classList, pageTitle, ogImage } = Astro.props;
         <div class="rotating-text">
           <span> Preservation Quest &middot; Saving Every Game &middot; Ever &middot;&nbsp;</span>
         </div>
-    </div>
-
-    <slot />
+      </div>
+    <slot  />
     <BaseFooter />
   </body>
 

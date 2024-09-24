@@ -24,6 +24,12 @@ html {
 body, main{
   height: 100%;
 }
+aside{
+  height: 40%;
+  display: flex;
+  width: fit-content;
+  margin: 2rem;
+}
 
 /* Container to center the rotating text */
 .circle {
@@ -95,7 +101,8 @@ body, main{
 
 body{
   height: 100%;
-  background-image: var(--rainbow-gradient), url('/wallpapers/mesh-gradient\ 1.jpg') ;
+  background-image: var(--rainbow-gradient), url('/wallpapers/mesh-gradient.jpg') ;
+  background-image: var(--rainbow-gradient), url('/wallpapers/pokemon.png') ;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
