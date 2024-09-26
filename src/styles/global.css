@@ -105,7 +105,7 @@ aside{
 body{
   height: 100%;
   background-image: var(--rainbow-gradient), url('/wallpapers/mesh-gradient.jpg') ;
-  background-image: var(--rainbow-gradient), url('/wallpapers/pokemon.png') ;
+  /* background-image: var(--rainbow-gradient), url('/wallpapers/pokemon.png') ; */
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;

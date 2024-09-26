@@ -32,6 +32,7 @@ const WallpaperFolder = () => {
         } bg-[rgba(0,0,0,0.08)] backdrop-blur-[13px] w-[250px] h-[150px] absolute top-[8px] left-[calc(100%+13px)] flex justify-center items-center transition-all duration-300`}
       >
         <div className="folded-paper">
+          
           <img src="/wallpapers/pokemon.png" style={{ width: "inherit" }} alt="Folded paper look" />
         </div>
       </div>
