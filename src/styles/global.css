@@ -5,8 +5,18 @@
   /* Base Tokens */
   --sys-color-white: #FFFFFF;
   --sys-color-black: #000000;
-  --electricEmerald: #4FFDA2;
-  --pacmanYello: #FEE220;
+  --sys-color-gray: #989FA2;
+  /*Primary Colors */
+  --electric-emerald: #4FFDA2;
+  --imagination-purple: #9940E6;
+  --Fire-n-Sun: #FD9B06;
+  --pacman-yellow: #FEE220;
+  --vibrant-blue: #1729FF;
+  
+  --selected-wallpaper: url('/wallpapers/mesh-gradient.jpg');
+
+  /* Headlines */
+  --h-font: "Degular Display Black"
   /* Theme Tokens */
   --primary: var(--sys-color-white);
   --secondary: var(--sys-color-black);
@@ -15,6 +25,7 @@
   --degularDisplayReg: "Degular Display";
   font-size: 16px;
   --rainbow-gradient: linear-gradient(0deg, rgba(255, 255, 255, 0.37) 0%, rgba(255, 255, 255, 0.37) 100%), linear-gradient(116deg, rgba(153, 64, 230, 0.40) 6.65%, rgba(253, 155, 6, 0.40) 28.3%, rgba(254, 226, 32, 0.40) 49.95%, rgba(79, 253, 162, 0.40) 71.6%, rgba(23, 41, 255, 0.40) 93.25%);
+  
 }
 
 html {
@@ -35,76 +46,11 @@ aside{
   display: none;
 }
 /* Container to center the rotating text */
-.circle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 358px; /* Adjust as per your need */
-  height: 358px;
-  margin: 0 auto;
-  border-radius: 50%;
-  background-color: rgba(0, 0, 0, 0.1);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.logo{
-  position: absolute;
-  width: 230px;
-  height: 230px;
-  border-radius: 50%;
-  background-size: cover;
-  background: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  
-}
-.logo svg{
-  width: 9.5em;
-  height: 10.375em;
-}
-.rotating-text {
-  position: absolute;
-  width: 319px;
-  height: 319px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  animation: rotateText 20s linear infinite;
-  animation-direction: reverse;
 
-}
-
-.rotating-text span {
-  font-family: var(--spaceMono);
-  font-size: 1.0625rem;
-  position: absolute;
-  height: 100%;
-  width: 0px;
-  transform-origin: center; 
-  padding: 0px;
-  margin: 0;
-  
-}
-
-/* Rotate animation */
-@keyframes rotateText {
- 0%
- {
-  transform: rotate(0deg);
- }
- 100%
- {
-  transform: rotate(360deg)
- }
-}
 
 body{
   height: 100%;
-  background-image: var(--rainbow-gradient), url('/wallpapers/mesh-gradient.jpg') ;
+  background-image: var(--rainbow-gradient), var(--selected-wallpaper) ;
   /* background-image: var(--rainbow-gradient), url('/wallpapers/pokemon.png') ; */
   background-size: cover;
   background-repeat: no-repeat;

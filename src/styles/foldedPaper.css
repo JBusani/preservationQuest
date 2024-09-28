@@ -3,7 +3,7 @@
   width: 62px;
   height: 74px;
   background-color: transparent;
-  border: black solid 1px; /* Main border */
+  overflow: hidden;
   object-fit: cover; /* Ensures the image fills the div properly */
   clip-path: polygon(0 0, calc(100% - 13px) 0, 100% 13px, 100% 100%, 0 100%);
 }
@@ -30,7 +30,7 @@
   content: "";
   position: absolute;
   top: 12px;
-  right: -2px;
+  right: 0px;
   width: 14px;
   height: 14px;
   background-color: #D9D9D9;

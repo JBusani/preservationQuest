@@ -1,0 +1,65 @@
+.circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 358px; /* Adjust as per your need */
+    height: 358px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .logo {
+    position: absolute;
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    background-size: cover;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .logo svg {
+    width: 9.5em;
+    height: 10.375em;
+  }
+  
+  .rotating-text {
+    position: absolute;
+    width: 319px;
+    height: 319px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: rotateText 20s linear infinite;
+    animation-direction: reverse;
+    animation-play-state: ${play ? 'running' : 'paused'};
+  }
+
+  .rotating-text span {
+    font-family: var(--spaceMono);
+    font-size: 1.0625rem;
+    position: absolute;
+    height: 100%;
+    width: 0px;
+    transform-origin: center; 
+    padding: 0px;
+    margin: 0;
+  }
+
+  /* Rotate animation */
+  @keyframes rotateText {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
