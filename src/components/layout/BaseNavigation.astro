@@ -55,7 +55,7 @@ const navigationItems = [
 const { pageTitle } = Astro.props;
 ---
 
-<header class=' border-0 flex justify-between px-[1.562rem] items-center header-style'>
+<header class=' border-0 flex justify-between px-[1.562rem] items-center header-style z-100 sticky top-0'>
   {pageTitle && <h1 class='hidden'>{pageTitle}</h1>}
   <nav class='hidden md:flex w-full justify-between items-left items-center '>
     <h2 class='hidden'>Navigation</h2>
@@ -76,7 +76,7 @@ const { pageTitle } = Astro.props;
                 <ul class=" hidden group-hover:block absolute top-[4rem] left-0 w-17.48rem">
                   {item.subNav.map((subNavItem, index) => (
                     <li>
-                      <a href={subNavItem.url} class='w-full block pl-1.24rem py-.875' title={`Go to ${subNavItem.name}`} class="hover:text-green">
+                      <a href={subNavItem.url} class='w-full block pl-1.24rem py-.885rem' title={`Go to ${subNavItem.name}`} class="hover:text-green">
                         {subNavItem.name}
                       </a>
                     </li>
