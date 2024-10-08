@@ -1,5 +1,9 @@
 ---
 import Layout from '@layouts/Default.astro';
+import WindowFrame from '@components/generic/windowFrame.astro';
+import WallpaperFolder from '@components/generic/WallpaperFolder';
+import TopBar from '@components/generic/topBar.astro';
+import UrlBar from '@components/generic/urlBar.astro';
 
 ---
 
@@ -8,7 +12,13 @@ import Layout from '@layouts/Default.astro';
   pageTitle='Preservation Quest | Home'
   description='Prservation Quest description goes here.'
 > 
-  <main >
-    <h1>WIndow Page</h1>>
+  <main class="flex relative flex-col w-100%">
+    <aside class="w-100%">
+      <WallpaperFolder client:load />
+    </aside>
+    <WindowFrame pageTitle='About Us' >
+      <TopBar title='About Us' />
+      <UrlBar />
+    </WindowFrame>
   </main>
 </Layout>

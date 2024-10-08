@@ -17,13 +17,16 @@
 
   /* Headlines */
   --h-font: "Degular Display Black"
+
+  /* Generic Styles */
+  --radius10: 10px;
+
   /* Theme Tokens */
   --primary: var(--sys-color-white);
   --secondary: var(--sys-color-black);
   --spaceMono: "Mono Space";
-  --inter: "Inter";
   --degularDisplayReg: "Degular Display";
-  font-size: 16px;
+  --font-size: 16px;
   --rainbow-gradient: linear-gradient(0deg, rgba(255, 255, 255, 0.37) 0%, rgba(255, 255, 255, 0.37) 100%), linear-gradient(116deg, rgba(153, 64, 230, 0.40) 6.65%, rgba(253, 155, 6, 0.40) 28.3%, rgba(254, 226, 32, 0.40) 49.95%, rgba(79, 253, 162, 0.40) 71.6%, rgba(23, 41, 255, 0.40) 93.25%);
   
 }
@@ -36,10 +39,10 @@ body{
   height: 100%;
 }
 aside{
-  height: 40%;
+  height: fit-content;
   display: flex;
   width: fit-content;
-  margin: 2rem;
+  padding: 2rem;
 }
 
 .hide{

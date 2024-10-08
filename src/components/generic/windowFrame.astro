@@ -1,0 +1,29 @@
+---
+interface Props{
+    pageTitle: string;
+}
+const {
+    pageTitle,
+
+} = Astro.props;
+
+---
+    <article id="windowFrame" class="windowFrame">
+    
+        <slot />
+    
+        
+    </article>
+
+<style>
+
+    .windowFrame{
+        margin: 0px auto;
+        min-height: 380px;
+        width: 600px;
+        max-width: 85%;
+        background-color: var(--sys-color-gray);
+        border: 2px solid black;
+        border-radius: 10px 10px 0px 0px;
+    }
+</style>

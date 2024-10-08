@@ -63,3 +63,26 @@
       transform: rotate(360deg);
     }
   }
+  @media screen and (max-width: 600px){
+    .circle{
+      max-width: 258px;
+      max-height: 258px;
+    }
+    .logo{
+      max-width: 130px;
+      max-height: 130px;
+
+    }
+    .rotating-text{
+      max-width: 219px;
+      max-height: 219px;
+    }
+    .logo svg {
+      width: 5.5em;
+      height: 6.375em;
+    }
+    .rotating-text span {
+      font-family: var(--spaceMono);
+      font-size: .8625rem;
+    }
+  }
