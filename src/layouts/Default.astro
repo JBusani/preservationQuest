@@ -24,12 +24,12 @@ const { title, description, classList, pageTitle, ogImage } = Astro.props;
 <html lang='en' class='h-full'>
   <BaseHead ogImage={ogImage} title={title} description={description} />
   <body >
-    <BaseNavigation {pageTitle} />
 
+    <BaseNavigation {pageTitle} />
     <AnimatedLogo play={true} client:only="react" />
     <slot  />
     <BaseFooter />
-  </body>
 
+  </body>
 </html>
    

@@ -22,8 +22,6 @@
   --radius10: 10px;
 
   /* Theme Tokens */
-  --primary: var(--sys-color-white);
-  --secondary: var(--sys-color-black);
   --spaceMono: "Mono Space";
   --degularDisplayReg: "Degular Display";
   --font-size: 16px;

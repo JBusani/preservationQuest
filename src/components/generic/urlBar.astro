@@ -1,13 +1,21 @@
 ---
+interface Props{
+    title: string;
+};
+const {title } = Astro.props;
 
 ---
 
 
-<div id="urlBar" slot="url-bar">
-    <div class="flex ">
+<div id="urlBar" slot="url-bar" >
+    <div class="flex gap-2 urlNav">
         <img src="/icons/leftArrow.svg" />
         <img src="/icons/rightArrow.svg" />
         <img src="/icons/refresh.svg"/>
+    </div>
+    <div id="url">
+        <img src="/icons/padlock.svg" alt="padlock secure icon" />
+        <p>https://www.preservationquest.org/{title}</p>
     </div>
 </div>
 
@@ -17,10 +25,33 @@
         width: 100%;
         height: 43px;
         display: flex;
+        gap: 1rem;
         padding: 0px 1.1rem;
         align-items: center;
         border-bottom: 2px solid black;
     }
-    
-
+    .urlNav{
+        width: fit-content;
+    }
+    #url{
+        display: flex;
+        width: 100%;
+        max-width: 85%;
+        gap: .5rem;
+        background-color: var(--sys-color-white);
+        border-radius: 5px;
+        padding: 0px .5rem;
+    }
+    #url p{
+        overflow: auto;
+    }
+    #url img{
+        border-right: solid lightgray 1px;
+        padding-right: .5rem;
+    }
+    @media screen and (max-width: 720px) {
+        #url{
+            max-width: 70%;
+        }
+    }
 </style>

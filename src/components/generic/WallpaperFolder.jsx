@@ -52,14 +52,14 @@ const WallpaperFolder = () => {
       <div id="wallpaperFolder hover:bg-[var(--sys-color-gray)]" onClick={toggleFolders}>
         <img
           id="folderClosed"
-          src="/images/folder-closed.svg"
-          alt="Desktop Wallpapers"
+          src="/icons/folder-closed.svg"
+          alt="View Desktop Wallpapers"
           className={isWallpapersOpen ? 'hide' : 'block'}
         />
         <img
           id="folderOpen"
-          src="/images/folder-open.svg"
-          alt="Desktop Wallpapers"
+          src="/icons/folder-open.svg"
+          alt="Choose Desktop Background Wallpaper"
           className={isWallpapersOpen ? 'block' : 'hide'}
         />
       </div>

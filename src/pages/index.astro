@@ -16,9 +16,10 @@ import UrlBar from '@components/generic/urlBar.astro';
     <aside class="w-100%">
       <WallpaperFolder client:load />
     </aside>
-    <WindowFrame pageTitle='About Us' >
+    <WindowFrame pageTitle='About Us' client:visible >
       <TopBar title='About Us' />
-      <UrlBar />
+      <UrlBar title='about' />
+      
     </WindowFrame>
   </main>
 </Layout>
