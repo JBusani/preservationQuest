@@ -1,0 +1,33 @@
+---
+import { getCollection } from 'astro:content';
+
+// Fetch all game carousel entries from the collection
+const allGameCarousel = await getCollection('gameCarousel');
+---
+
+<article>
+    <p>About Content goes here.</p>
+    
+    <!-- Game Carousel -->
+    <div id="gameCarousel" class="flex overflow-x-auto whitespace-nowrap space-x-4 snap-x snap-mandatory">
+        {allGameCarousel.map((game) => (
+            <div class="min-w-[300px] snap-start p-2 border border-black rounded-[5px]">
+                <img src={game.data.image} class="w-[300px] h-auto mx-auto rounded-md object-contain" alt={game.data.title} />
+                
+                <!-- Caption with responsive text and inline-block width -->
+                <caption class="text-center flex justify-between items-center mt-2">
+                    <p class="font-bold inline-block">{game.data.title}</p>
+                    <p class="font-bold inline-block">{game.data.year}</p>
+                </caption>
+            </div>
+        ))}
+    </div>
+</article>
+
+<!-- Tailwind Animation for Auto-scrolling (CSS part) -->
+<style>
+  @keyframes scroll-left {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+  }
+</style>

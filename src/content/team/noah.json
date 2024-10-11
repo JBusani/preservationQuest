@@ -1,15 +1,15 @@
 {
-    "firstName": "Jake",
-    "lastName": "Bersani",
+    "firstName": "Noah",
+    "lastName": "Doe",
     "title": "Lead Developer",
-    "bio": "Jake is a passionate web developer with experience in building web applications. His favorite pastime games as a kid were Pokemon via handheld Gameboys and Blades of Steel on his first Nitendo.",
+    "bio": "Noah is visionary and leader of preservation quest. ",
     "social": {
       "website": "https://johndoe.dev",
       "twitter": "https://twitter.com/johndoe",
       "github": "https://github.com/johndoe",
       "facebook": "https://facebook.com/johndoe",
       "instagram": "https://instagram.com/johndoe",
-      "email": "jakebersani@example.com"
+      "email": "john@example.com"
     },
     "image": "#"
   }

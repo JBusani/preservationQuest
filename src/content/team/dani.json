@@ -1,0 +1,16 @@
+{
+    "firstName": "Dani",
+    "lastName": "Doe",
+    "title": "Lead UX/UI Designer",
+    "bio": "Dani is a passionate developer with over 10 years of experience in building web applications and leading teams.",
+    "social": {
+      "website": "https://johndoe.dev",
+      "twitter": "https://twitter.com/johndoe",
+      "github": "https://github.com/johndoe",
+      "facebook": "https://facebook.com/johndoe",
+      "instagram": "https://instagram.com/johndoe",
+      "email": "john@example.com"
+    },
+    "image": "#"
+  }
+  

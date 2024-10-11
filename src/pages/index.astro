@@ -4,7 +4,7 @@ import WindowFrame from '@components/generic/windowFrame.astro';
 import WallpaperFolder from '@components/generic/WallpaperFolder';
 import TopBar from '@components/generic/topBar.astro';
 import UrlBar from '@components/generic/urlBar.astro';
-
+import About from '@components/windows/about.astro';
 ---
 
 <Layout
@@ -19,7 +19,7 @@ import UrlBar from '@components/generic/urlBar.astro';
     <WindowFrame pageTitle='About Us' client:visible >
       <TopBar title='About Us' />
       <UrlBar title='about' />
-      
+      <About client:idle />
     </WindowFrame>
   </main>
 </Layout>
