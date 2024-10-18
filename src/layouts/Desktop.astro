@@ -1,0 +1,86 @@
+---
+//components
+import BaseNavigation from '@components/layout/BaseNavigation.astro';
+import BaseFooter from '@components/layout/BaseFooter';
+import BaseHead from '../components/layout/BaseHead.astro';
+import AnimatedLogo from '@components/generic/animatedLogo';
+import { getCollection } from 'astro:content';
+import WindowFrame from '@components/generic/windowFrame';
+import WallpaperFolder from '@components/generic/WallpaperFolder';
+import TopBar from '@components/generic/topBar';
+import UrlBar from '@components/generic/urlBar';
+import About from '@components/windows/about.astro';
+//styles
+import '../styles/global.css';
+import { $currentPage, Pages } from 'src/store';
+
+interface Props {
+  title: string;
+  description: string;
+  classList?: string;
+  pageTitle?: string;
+  ogImage?: URL;
+}
+
+
+const allContentPages = await getCollection('pages');
+console.log(allContentPages);
+
+
+const { title, description, classList, pageTitle, ogImage } = Astro.props;
+---
+<html lang='en' class='h-full'>
+
+  <BaseHead ogImage={ogImage} title={title} description={description} />
+  <body >
+
+  <BaseNavigation {pageTitle} />
+  <AnimatedLogo play={true} client:only="react" />
+  <main class="flex relative flex-col w-100%">
+    <aside class="w-100%">
+      <WallpaperFolder client:load />
+    </aside>
+    <slot />
+    </main>
+    <BaseFooter client:only="react"/>
+    </body>
+    
+</html>
+ 
+
+
+
+<style>
+  .footerNav {
+    border-radius: 40px;
+    border: 2px solid rgba(255, 255, 255, 0.10);
+    background: rgba(0, 0, 0, 0.26);
+    backdrop-filter: blur(13px);
+    height: 6.3rem;
+    margin: 0 auto;
+    width: 38.1875rem;
+    max-width: 90%;
+  }
+  .link {
+    display: block;
+    margin-top: -1rem;
+    position: relative;
+    transition: margin-top 300ms ease-in-out;
+  }
+  .link {
+    height: 94px;
+    width: 99px;
+  }
+  .link:hover {
+    margin-top: -3.5rem;
+  }
+  .link + .text {
+    overflow: hidden;
+    height: 0px;
+    transition: height 400ms ease-in-out;
+  }
+  .link:hover + .text {
+    overflow: visible;
+    height: .9rem;
+  }
+</style>

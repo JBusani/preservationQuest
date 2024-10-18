@@ -1,0 +1,35 @@
+ /* Styling for your footer */
+ .footerNav {
+    border-radius: 40px;
+    border: 2px solid rgba(255, 255, 255, 0.10);
+    background: rgba(0, 0, 0, 0.26);
+    backdrop-filter: blur(13.05px);
+    height: 6.3rem;
+    margin: 0px auto;
+    width: 38.1875rem;
+    max-width: 90%;
+  }
+
+  .link {
+    display: block;
+    margin-top: -1rem;
+    position: relative;
+    transition: margin-top 300ms ease-in-out;
+    height: 94px;
+    width: 99px;
+  }
+
+  .link:hover {
+    margin-top: -3.5rem;
+  }
+
+  .link + .text {
+    overflow: hidden;
+    height: 0px;
+    transition: height 400ms ease-in-out;
+  }
+
+  .link:hover + .text {
+    overflow: visible;
+    height: .9rem;
+  }

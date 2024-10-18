@@ -1,25 +1,21 @@
 ---
-import Layout from '@layouts/Default.astro';
-import WindowFrame from '@components/generic/windowFrame.astro';
+import Layout from '@layouts/Desktop.astro';
+import WindowFrame from '@components/generic/windowFrame';
 import WallpaperFolder from '@components/generic/WallpaperFolder';
-import TopBar from '@components/generic/topBar.astro';
-import UrlBar from '@components/generic/urlBar.astro';
+import TopBar from '@components/generic/topBar';
+import UrlBar from '@components/generic/urlBar';
 import About from '@components/windows/about.astro';
+import Content from '@components/generic/content';
+
 ---
 
-<Layout
-  title='Home'
-  pageTitle='Preservation Quest | Home'
-  description='Prservation Quest description goes here.'
-> 
-  <main class="flex relative flex-col w-100%">
-    <aside class="w-100%">
-      <WallpaperFolder client:load />
-    </aside>
-    <WindowFrame pageTitle='About Us' client:visible >
-      <TopBar title='About Us' />
-      <UrlBar title='about' />
-      <About client:idle />
-    </WindowFrame>
-  </main>
-</Layout>
+  <Layout
+    title=`Home`
+    pageTitle='Preservation Quest | Home'
+    description='Prservation Quest description goes here.'
+  > 
+    <main class="flex relative flex-col w-100%">
+      <Content client:only="react" />
+    </main>
+  </Layout>
+

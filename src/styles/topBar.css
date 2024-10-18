@@ -1,0 +1,21 @@
+#topBar {
+    background-color: var(--sys-color-gray);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    font-size: 1.2rem;
+    align-items: center;
+    border-radius: 10px 10px 0px 0px;
+    border-bottom: 2px solid black;
+  }
+  
+  #topBar h6 {
+    font-size: 1.2rem;
+  }
+  
+  .icon {
+    width: .9rem;
+    height: .9rem;
+  }
+  

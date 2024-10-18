@@ -14,7 +14,6 @@ const allGameCarousel = await getCollection('gameCarousel');
             <div class="min-w-[300px] snap-start p-2 border border-black rounded-[5px]">
                 <img src={game.data.image} class="w-[300px] h-auto mx-auto rounded-md object-contain" alt={game.data.title} />
                 
-                <!-- Caption with responsive text and inline-block width -->
                 <caption class="text-center flex justify-between items-center mt-2">
                     <p class="font-bold inline-block">{game.data.title}</p>
                     <p class="font-bold inline-block">{game.data.year}</p>
